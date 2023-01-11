@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#this will make django craete a nrwuser table instead of the builti-in user table 
+#because the newuser model extends the AbstractUser and that will let us add additional fields 
+#to the existing fields 
+AUTH_USER_MODEL='user.NewUser'
